@@ -51,13 +51,13 @@ AddEventHandler('rsg_fishing:client:StartFishing', function()
 				if randomNumber < 3 then
 					TriggerServerEvent('rsg_fishing:server:fishcaught')
 				else
-					exports['rsg_notify']:DisplayNotification('you did not catch anything!', 5000)
+					exports['qbr-core']:Notify(9, 'you did not catch anything!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 				end
 			else
-				exports['rsg_notify']:DisplayNotification('you can\'t fish here!', 5000)
+				exports['qbr-core']:Notify(9, 'you can\'t fish here!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 			end
 		else
-			exports['rsg_notify']:DisplayNotification('you need bait to fish!', 5000)
+			exports['qbr-core']:Notify(9, 'you need bait to fish!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 		end
 	end, { ['fishingbait'] = 1 })
 end)

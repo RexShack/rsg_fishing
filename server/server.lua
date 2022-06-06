@@ -15,16 +15,16 @@ AddEventHandler('rsg_fishing:server:fishcaught', function()
 	if randomNumber == 1 then
 		Player.Functions.AddItem('smallfish', 1)
 		TriggerClientEvent('inventory:client:ItemBox', src, sharedItems['smallfish'], "add")
-		TriggerClientEvent('rsg_notify:client:notifiy', src, 'you caught a small fish', 5000)
+		TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Caught', 5000, 'you caught a small fish', 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 	elseif randomNumber == 2 then
 		Player.Functions.AddItem('mediumfish', 1)
 		TriggerClientEvent('inventory:client:ItemBox', src, sharedItems['mediumfish'], "add")
-		TriggerClientEvent('rsg_notify:client:notifiy', src, 'you caught a medium fish', 5000)
+		TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Caught', 5000, 'you caught a medium fish', 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 	elseif randomNumber == 3 then
 		Player.Functions.AddItem('largefish', 1)
 		TriggerClientEvent('inventory:client:ItemBox', src, sharedItems['largefish'], "add")
-		TriggerClientEvent('rsg_notify:client:notifiy', src, 'you caught a large fish', 5000)
+		TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Caught', 5000, 'you caught a large fish', 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 	else
-		TriggerClientEvent('rsg_notify:client:notifiy', src, 'these fish are not biting today!', 5000)
+		TriggerClientEvent('QBCore:Notify', src, 9, 'these fish are not biting today!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 	end
 end)
